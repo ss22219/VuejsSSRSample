@@ -1,14 +1,14 @@
 ﻿<template>
   <div>
     <h1>Messages</h1>
-    <Message v-for="msg in messages" :message="msg" />
+    <Message v-for="msg in messages" :message="msg" :key="msg.title" />
     <button @click="fetchMessages(lastFetchedMessageDate)">Fetch a message</button>
   </div>
 </template>
 
 <script>
   import { mapGetters, mapActions } from 'vuex'
-  import Message from './Message.vue'
+  import Message from './Message.vue.html'
 
   export default {
   components: { Message },
